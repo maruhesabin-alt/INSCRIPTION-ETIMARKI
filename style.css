@@ -1,0 +1,17 @@
+/* COLLECT PRO — base commune : couleurs, typographie, mouvement */
+:root{
+  --ink:#0b1530;--ink2:#1b2a52;--blue:#2f5bff;--blue2:#e6ecff;--bg:#eef1f6;--card:#fff;--line:#d9dfeb;--mut:#5b6785;
+  --ok:#12805c;--warn:#b26a00;--err:#c4283c;--r:10px;
+  --font-display:"Bricolage Grotesque","Segoe UI Variable Display","Segoe UI",system-ui,sans-serif;
+  --font-body:"Figtree","Segoe UI",system-ui,-apple-system,sans-serif;
+  --ease:cubic-bezier(.2,.7,.2,1);--t:.35s;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font:15px/1.55 var(--font-body);background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:var(--font-display);letter-spacing:-.02em;line-height:1.12;font-weight:700}
+button,input,select,textarea{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--blue);outline-offset:2px}
+.skip{position:absolute;left:-999px;top:8px;background:#fff;color:var(--ink);padding:8px 14px;border-radius:8px;z-index:50}
+.skip:focus{left:8px}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important;scroll-behavior:auto!important}}

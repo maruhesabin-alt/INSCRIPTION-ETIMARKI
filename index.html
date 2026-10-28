@@ -1,75 +1,103 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#087f5b">
-  <meta name="description" content="Formulaire officiel de préinscription ETIMARKI PAMOJA HAKUNA MATATA.">
-  <title>Inscription | ETIMARKI PAMOJA HAKUNA MATATA</title>
-  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="css/styles.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>COLLECT PRO — Collectez, suivez et analysez vos données</title>
+<meta name="description" content="Créez des formulaires d'inscription, d'adhésion ou d'enquête, recevez les réponses et analysez-les au même endroit.">
+<meta name="theme-color" content="#0b1530">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Figtree:wght@400;600;700&display=swap">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="landing.css">
 </head>
 <body>
-  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
-  <header class="topbar">
-    <a class="brand" href="#" aria-label="ETIMARKI accueil">
-      <span class="brand-mark">E</span><span><strong>ETIMARKI</strong><small>PAMOJA HAKUNA MATATA</small></span>
-    </a>
-    <span class="secure-note"><span class="pulse"></span> Portail de préinscription</span>
-  </header>
+<a class="skip" href="#contenu">Aller au contenu</a>
+<div class="progress" aria-hidden="true"></div>
+<nav class="nav" aria-label="Navigation principale">
+  <a class="brand" href="index.html"><i>◆</i>COLLECT PRO</a>
+  <div class="links"><a href="#fonctions">Fonctions</a><a href="#comment">Comment ça marche</a><a href="#serveur">Serveur</a><a class="cta" href="app.html">Ouvrir l'espace</a></div>
+</nav>
 
-  <main class="page-shell">
-    <section class="intro">
-      <div class="eyebrow"><span class="eyebrow-line"></span> GRANDIR ENSEMBLE</div>
-      <h1>Votre prochaine étape<br><span>commence ici.</span></h1>
-      <p>Remplissez le formulaire pour soumettre votre demande d’inscription. Notre équipe recevra votre dossier dans son espace administratif.</p>
-      <div class="promise-row">
-        <div class="promise"><span class="promise-icon">✓</span><span><b>Simple et rapide</b><small>Quelques minutes suffisent</small></span></div>
-        <div class="promise"><span class="promise-icon">↗</span><span><b>Suivi administratif</b><small>Votre demande est enregistrée</small></span></div>
-      </div>
-      <div class="side-note"><span class="note-star">✦</span><span>« Un pour tous, tous pour un. »<small>La devise d’ETIMARKI</small></span></div>
-    </section>
+<header class="hero">
+  <div class="grid-bg" aria-hidden="true"></div>
+  <div class="wrap">
+    <div>
+      <h1 data-split>Collectez vos données, <em>sans en perdre une.</em></h1>
+      <p class="lead">Inscriptions, adhésions, recrutements, enquêtes ou messages : créez un formulaire par activité, partagez le lien et suivez chaque réponse au même endroit.</p>
+      <div class="actions"><a class="cta" href="app.html">Créer ma première activité</a><a class="cta ghost" href="#comment">Voir comment ça marche</a></div>
+    </div>
+    <div class="demo" aria-hidden="true">
+      <div class="bar2"><b></b><b></b><b></b><span>Aperçu animé</span></div>
+      <div class="top2"><span class="big" id="count">0</span><small>inscriptions reçues</small></div>
+      <div class="rows" id="rows"></div>
+      <div class="spark" id="spark"></div>
+      <p class="note-demo">Exemple fictif pour illustrer. Vos vraies statistiques viennent uniquement de vos réponses.</p>
+    </div>
+  </div>
+</header>
 
-    <section class="form-card" aria-labelledby="form-title">
-      <div class="card-top">
-        <div><span class="step-label">FORMULAIRE · ÉTAPE 01</span><h2 id="form-title">Demande d’inscription</h2><p>Les champs marqués d’un astérisque sont obligatoires.</p></div>
-        <div class="card-symbol">✳</div>
-      </div>
-      <div class="progress-track"><span></span></div>
-      <form id="registration-form">
-        <div class="form-grid">
-          <label class="field full"><span>Nom complet <i>*</i></span><input name="fullName" autocomplete="name" placeholder="Ex. : Jean Kambale" required minlength="3" maxlength="120"></label>
-          <label class="field"><span>Adresse e-mail <i>*</i></span><input name="email" type="email" autocomplete="email" placeholder="vous@exemple.com" required maxlength="180"></label>
-          <label class="field"><span>Téléphone / WhatsApp <i>*</i></span><input name="phone" type="tel" autocomplete="tel" placeholder="+243 ..." required minlength="7" maxlength="30"></label>
-          <label class="field"><span>Ville / territoire <i>*</i></span><input name="city" autocomplete="address-level2" placeholder="Ex. : Goma" required maxlength="100"></label>
-          <label class="field"><span>Formation ou activité souhaitée <i>*</i></span>
-            <select name="program" required>
-              <option value="">Choisissez une option</option>
-              <option>Informatique / bureautique</option>
-              <option>Graphisme et design</option>
-              <option>Multimédia / audiovisuel</option>
-              <option>Langues</option>
-              <option>Leadership et développement communautaire</option>
-              <option>Autre / à préciser</option>
-            </select>
-          </label>
-          <label class="field full"><span>Pourquoi souhaitez-vous vous inscrire ?</span><textarea name="message" rows="3" maxlength="1200" placeholder="Présentez brièvement votre objectif (facultatif)"></textarea><small class="field-hint">1 200 caractères maximum.</small></label>
-        </div>
-        <label class="consent"><input type="checkbox" name="consent" required><span>J’accepte que les informations ci-dessus soient utilisées par ETIMARKI pour traiter ma demande d’inscription. <i>*</i></span></label>
-        <div id="form-status" class="status" role="status" aria-live="polite" hidden></div>
-        <button class="submit-button" type="submit"><span>Soumettre ma demande</span><span class="button-arrow">↗</span></button>
-        <p class="privacy-note"><span>▣</span> Vos informations sont transmises au serveur d’inscription configuré par l’association.</p>
-      </form>
-      <div id="success-panel" class="success-panel" hidden>
-        <div class="success-icon">✓</div><h2>Demande envoyée !</h2>
-        <p>Votre demande a été enregistrée. L’équipe d’ETIMARKI pourra la consulter dans l’espace administratif.</p>
-        <p class="reference">Référence : <strong id="registration-reference"></strong></p>
-        <button id="new-registration" class="secondary-button" type="button">Envoyer une autre demande</button>
-      </div>
-    </section>
-  </main>
-  <footer><span>© <span id="year"></span> ETIMARKI PAMOJA HAKUNA MATATA</span><span>Un pour tous, tous pour un.</span></footer>
-  <script src="js/config.js"></script>
-  <script src="js/app.js"></script>
+<div class="ribbon" aria-hidden="true"><div class="track">
+  <span>Inscription à une formation</span><span>Événement</span><span>Application</span><span>Site web</span><span>Recrutement</span><span>Adhésion</span><span>Enquête</span><span>Messages de contact</span>
+</div></div>
+
+<main id="contenu">
+<section class="sec" id="fonctions">
+  <div class="wrap">
+    <h2 class="rv">Tout ce qu'il faut pour gérer une collecte.</h2>
+    <p class="sub rv" style="--d:1">Chaque activité garde ses propres champs, ses données et ses statistiques. Rien n'est mélangé.</p>
+    <div class="feat">
+      <article class="f rv" style="--d:0"><div class="ic">✎</div><h3>Formulaires sur mesure</h3><p>Dix types de champs : texte, e-mail, téléphone, nombre, date, listes, choix multiples, case à cocher. Obligatoires ou facultatifs.</p></article>
+      <article class="f rv" style="--d:1"><div class="ic">☰</div><h3>Inscriptions</h3><p>Tableau avec recherche, tri, filtres par date, pagination, modification, suppression confirmée.</p></article>
+      <article class="f rv" style="--d:2"><div class="ic">✉</div><h3>Messages</h3><p>Boîte de réception par activité avec statuts : nouveau, lu, en cours, répondu, archivé, et notes internes.</p></article>
+      <article class="f rv" style="--d:0"><div class="ic">▥</div><h3>Analyse</h3><p>Évolution sur 14 jours et répartition des réponses calculées sur vos données réelles, jamais inventées.</p></article>
+      <article class="f rv" style="--d:1"><div class="ic">⇩</div><h3>Exports et PDF</h3><p>CSV et JSON des résultats filtrés, rapports à enregistrer en PDF depuis votre navigateur.</p></article>
+      <article class="f rv" style="--d:2"><div class="ic">↺</div><h3>Historique et corbeille</h3><p>Archivez, restaurez, supprimez avec confirmation. Chaque opération importante est journalisée.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="sec steps" id="comment">
+  <div class="wrap">
+    <h2 class="rv">Trois étapes, dans cet ordre.</h2>
+    <p class="sub rv" style="--d:1">De l'idée au premier enregistrement reçu.</p>
+    <div class="stp">
+      <div class="s rv" style="--d:0"><span class="n">1</span><h3>Créez l'activité</h3><p>Donnez-lui un nom, un type, puis choisissez les champs que vos visiteurs doivent remplir.</p></div>
+      <div class="s rv" style="--d:1"><span class="n">2</span><h3>Publiez le formulaire</h3><p>Un clic envoie la définition au serveur. Vous obtenez un lien public à partager.</p></div>
+      <div class="s rv" style="--d:2"><span class="n">3</span><h3>Recevez et analysez</h3><p>Récupérez les réponses dans l'espace de gestion, filtrez, exportez, générez un rapport.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="serveur">
+  <div class="wrap split">
+    <div>
+      <h2 class="rv">Un vrai serveur, une vraie base de données.</h2>
+      <p class="sub rv" style="--d:1;margin-bottom:0">Le serveur reçoit les réponses des formulaires publics, vérifie chaque champ et les enregistre dans une base SQL. Il ne demande aucune installation de bibliothèque.</p>
+      <ul class="list rv" style="--d:2">
+        <li>Validation côté serveur de chaque réponse</li>
+        <li>Protection contre les envois en rafale et les robots simples</li>
+        <li>Administration protégée par e-mail et mot de passe, sauvegardes automatiques</li>
+        <li>Activités isolées les unes des autres</li>
+      </ul>
+    </div>
+    <pre class="code2 rv" style="--d:1"><span class="c"># dans le dossier du projet</span>
+node server.js
+
+<span class="c"># le serveur affiche</span>
+COLLECT PRO démarré : http://localhost:3000
+Administration : http://localhost:3000/admin.html</pre>
+  </div>
+</section>
+
+<div class="final rv">
+  <h2>Prêt à recevoir votre première réponse ?</h2>
+  <p>Ouvrez l'espace de gestion et créez une activité en moins d'une minute.</p>
+  <a class="cta" href="app.html">Ouvrir COLLECT PRO</a>
+</div>
+</main>
+<footer class="ft"><span>COLLECT PRO</span><span class="sp"></span><a href="app.html">Espace de gestion</a> <a href="admin.html">Administration</a></footer>
+<script src="landing.js"></script>
 </body>
 </html>

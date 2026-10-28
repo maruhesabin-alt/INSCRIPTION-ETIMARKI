@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>COLLECT PRO — Administration</title>
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#0b1530">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Figtree:wght@400;600;700&display=swap">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="app.css">
+<style>
+.login{max-width:420px;margin:60px auto}.login h1{margin-bottom:6px}
+.prog{height:12px;background:var(--line);border-radius:99px;overflow:hidden;margin:8px 0}.prog i{display:block;height:100%;background:var(--blue);border-radius:99px;transition:width .5s var(--ease)}
+.prog.run i{background:linear-gradient(90deg,var(--blue),#7f9bff,var(--blue));background-size:200% 100%;animation:sh 1.2s linear infinite}
+@keyframes sh{to{background-position:-200% 0}}
+.big{font-size:17px;padding:13px 24px}
+.src h3{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+details summary{cursor:pointer;color:var(--blue);font-weight:600;margin:6px 0}
+.mono{font-family:Consolas,monospace;font-size:13px}
+.err{color:var(--err);font-weight:600}
+.two{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:10px}
+</style>
+</head>
+<body>
+<a class="skip" href="#app">Aller au contenu</a>
+<header class="top">
+  <button class="logo" onclick="go('over')" aria-label="Accueil de l'administration"><i>◆</i>COLLECT PRO · Administration</button>
+  <a class="navlink hide" href="app.html">Espace de gestion</a><a class="navlink hide" href="index.html">Site</a>
+  <span class="sp"></span><span id="who" class="hide" style="color:#9fb0dd"></span>
+  <button class="btn g s" id="out" hidden>Se déconnecter</button>
+</header>
+<main id="app"></main>
+<div id="toast" role="status" aria-live="polite"></div>
+<dialog id="dlg"></dialog>
+<script src="admin.js"></script>
+</body>
+</html>
